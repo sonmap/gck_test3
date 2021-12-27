@@ -1,0 +1,138 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: index-html-configmap
+  namespace: default
+data:
+  index.html: |
+    <html>
+    <h1>Welcome</h1>
+    </br>
+    <h1>Hello! This is a configmap Index file </h1>
+    <button onclick="window.location.href='https://www.naver.com'">NAVER</button>
+    <button onclick="goBack()">page before </button>
+    <button onclick="window.location.href='http://35.221.86.96:5601/'">Kibana</button> 
+    <button onclick="window.location.href='index2.html'">index2</button>
+    <button onclick="window.location.href='test5.html'">test5</button>
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+    </html
+  test.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Welcome to nginx!</title>
+    <style>
+    html { color-scheme: light dark; }
+    body { width: 35em; margin: 0 auto;
+    font-family: Tahoma, Verdana, Arial, sans-serif; }
+    </style>
+    </head>
+    <body>
+    <h1>test!</h1>
+    <p>test page.</p>
+
+    <p><em>Thank you for using nginx.</em></p>
+    </body>
+    </html>
+  test2.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Welcome to nginx!</title>
+    <style>
+    html { color-scheme: light dark; }
+    body { width: 35em; margin: 0 auto;
+    font-family: Tahoma, Verdana, Arial, sans-serif; }
+    </style>
+    </head>
+    <body>
+    <h1>test2!</h1>
+    <p>test page2.</p>
+
+    <p><em>Thank you for using nginx.</em></p>
+    </body>
+    </html>
+  test5.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Welcome to nginx!</title>
+    <style>
+    html { color-scheme: light dark; }
+    body { width: 35em; margin: 0 auto;
+    font-family: Tahoma, Verdana, Arial, sans-serif; }
+    </style>
+    </head>
+    <body>
+    <h1>test5!</h1>
+    <p>test page2.</p>
+    <button onclick="goBack()">page before </button>
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+
+    <p><em>Thank you for using nginx.</em></p>
+    </body>
+    </html>
+  index2.html: |  
+    <!doctype html>  
+    <html>  
+      <head>  
+        <meta charset="utf-8">  
+        <title>Cluster Ingress Index</title>  
+        <link rel="stylesheet" href="main.css">  
+      </head>  
+      <body>  
+      <button onclick="goBack()">page before </button>
+      <script>
+      function goBack() {
+        window.history.back();
+      }
+      </script>
+        <table class="class1">  
+          <tr>  
+            <td class="class2">Kubernetes Platform</td>  
+          </tr>  
+          <tr>  
+            <td class="class1">  
+              <table class="class3">  
+                <tr><td><h1>Cluster Ingress Index</h1></td></tr>  
+              </table>  
+            </td>  
+          </tr>  
+          <tr>  
+            <td>  
+              <table class="class3">  
+                <tr>  
+                <td>  
+                   <h2>The following are links to this cluster's ingress resources:</h2>  
+                  </td>  
+                </tr>  
+                <tr>  
+                <td class="class4">  
+                    <a href="https://<ROOT_INGRESS_PATH>" target="_blank">Root Ingress</a><br/>  
+                    <a href="https://<OTHER_INGRESS_PATH>" target="_blank">Other Ingress</a><br/>   
+                 </td>  
+               </tr>  
+              </table>  
+            </td>  
+          </tr>  
+         </table>  
+      </body>  
+    </html>  
+
+  main.css: |  
+
+    body {  
+      background-color: rgb(224,224,224);  
+      font-family: Verdana, Arial, Helvetica, sans-serif;  
+      font-size: 100%;  
+    }  
+
+    
